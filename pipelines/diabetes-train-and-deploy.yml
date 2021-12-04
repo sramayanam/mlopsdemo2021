@@ -14,7 +14,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-18.04'
 
-#apt-cache policy azure-cli;
 steps:
 - task: AzureCLI@2
   displayName: 'Downgrade AZ CLI'
