@@ -16,6 +16,13 @@ pool:
 
 steps:
 - task: AzureCLI@2
+  displayName: 'Downgrade CLI'
+  inputs:
+    azureSubscription: 'svcmlworkspace'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'sudo apt-get install azure-cli=2.29.1-1~bionic'
+- task: AzureCLI@2
   displayName: 'Install AML CLI'
   inputs:
     azureSubscription: $(ml-ws-connection)
