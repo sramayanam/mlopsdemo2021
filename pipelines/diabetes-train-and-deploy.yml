@@ -15,13 +15,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: AzureCLI@2
-  displayName: 'Downgrade AZ CLI'
-  inputs:
-    azureSubscription: 'svcmlworkspace'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'apt-cache policy azure-cli;sudo apt-get install azure-cli=2.29.0-1~focal'
 
 - task: AzureCLI@2
   displayName: 'Install AML CLI'
