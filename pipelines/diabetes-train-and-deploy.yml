@@ -12,7 +12,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-18.04'
 
 steps:
 - task: AzureCLI@2
@@ -21,7 +21,7 @@ steps:
     azureSubscription: 'svcmlworkspace'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'sudo apt-get install azure-cli=2.29.1'
+    inlineScript: 'sudo apt-get install azure-cli=2.29.1-1~bionic'
 
 - task: AzureCLI@2
   displayName: 'Install AML CLI'
