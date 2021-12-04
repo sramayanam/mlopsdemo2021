@@ -14,6 +14,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-18.04'
 
+#apt-cache policy azure-cli;
 steps:
 - task: AzureCLI@2
   displayName: 'Downgrade AZ CLI'
@@ -21,7 +22,7 @@ steps:
     azureSubscription: 'svcmlworkspace'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'apt-cache policy azure-cli;sudo apt-get install azure-cli=2.2.9-1~bionic'
+    inlineScript: 'sudo apt-get install azure-cli=2.29.1-1~bionic'
 
 - task: AzureCLI@2
   displayName: 'Install AML CLI'
