@@ -16,7 +16,7 @@ pool:
 
 steps:
 - task: AzureCLI@2
-  displayName: 'Downgrade CLI'
+  displayName: 'Downgrade AZ CLI'
   inputs:
     azureSubscription: 'svcmlworkspace'
     scriptType: 'bash'
