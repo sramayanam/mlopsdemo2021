@@ -12,7 +12,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-18.04'
+  vmImage: 'Ubuntu-latest'
 
 steps:
 - task: AzureCLI@2
@@ -21,7 +21,7 @@ steps:
     azureSubscription: $(ml-ws-connection)
     scriptLocation: inlineScript
     scriptType: 'bash'
-    inlineScript: 'az extension add -n ml -y'
+    inlineScript: 'az extension add -n azure-cli-ml'
 
 - task: AzureCLI@2
   displayName: 'Attach folder to workspace'
