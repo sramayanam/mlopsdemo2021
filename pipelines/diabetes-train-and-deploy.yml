@@ -21,7 +21,7 @@ steps:
     azureSubscription: 'svcmlworkspace'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
-    inlineScript: 'apt-cache policy azure-cli;sudo apt-get install azure-cli=2.2.0-1~bionic'
+    inlineScript: 'apt-cache policy azure-cli;sudo apt-get install azure-cli=2.29.0-1~focal'
 
 - task: AzureCLI@2
   displayName: 'Install AML CLI'
